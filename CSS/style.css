@@ -262,11 +262,14 @@ body {
 
 .features-icon-bg {
   background-color: var(--bg-our-team-section);
-  width: 270px;
+  width: 100%;
   height: 120px;
   border-radius: 4px;
-  padding: 25px 100px;
   margin-bottom: 30px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .features-icon {
@@ -361,15 +364,12 @@ body {
 
 /* Social Links  */
 
-.team-social-link {
+.team.section .links-list {
+  display: flex;
   width: 206px;
   height: 44px;
   margin: 0;
   padding: 0;
-}
-
-.team-social-link .links-list {
-  display: flex;
 }
 
 .team-social-link .link-item:not(:last-child) {
@@ -446,17 +446,13 @@ body {
 
 .footer-container {
   display: flex;
+  align-items: center;
   margin-left: auto;
   margin-right: auto;
   width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   outline: 0px solid tomato;
-}
-
-.footer-contact-box {
-  width: 231px;
-  height: 81px;
 }
 
 .footer {
@@ -503,11 +499,6 @@ body {
 }
 
 .footer-social {
-  display: flex;
-  flex-wrap: wrap;
-  width: 206px;
-  height: 80px;
-  margin-top: 32px;
   margin-left: 70px;
 }
 
@@ -612,12 +603,10 @@ body {
   width: calc((100% - 60px) / 3);
   margin-right: 30px;
   margin-bottom: 30px;
-
-  box-sizing: border-box;
 }
 
-.portfolio-list .item:hover,
-.portfolio-list .item:focus {
+.portfolio-list .portfolio-link:hover,
+.portfolio-list .portfolio-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
@@ -651,6 +640,7 @@ body {
 }
 
 .portfolio .portfolio-link {
+  display: inline-block;
   text-decoration: none;
 }
 
